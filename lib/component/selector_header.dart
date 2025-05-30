@@ -25,10 +25,10 @@ class SelectorHeader extends ConsumerWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                SelectorButton(0),
-                SelectorButton(1),
-                SelectorButton(2),
-                SelectorButton(3),
+                SelectorButton(id: 0),
+                SelectorButton(id: 1),
+                SelectorButton(id: 2),
+                SelectorButton(id: 3),
               ],
             ),
           ),

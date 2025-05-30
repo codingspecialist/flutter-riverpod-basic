@@ -3,9 +3,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_shop/page/home_vm.dart';
 
 class SelectorButton extends ConsumerWidget {
-  int myIndex;
+  int id;
 
-  SelectorButton(this.myIndex);
+  SelectorButton({required this.id});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -16,12 +16,12 @@ class SelectorButton extends ConsumerWidget {
       width: 70,
       height: 70,
       decoration: BoxDecoration(
-        color: model.isSelected(myIndex) ? Colors.orange : Colors.grey,
+        color: model.isSelected(id) ? Colors.orange : Colors.grey,
         borderRadius: BorderRadius.circular(20),
       ),
       child: IconButton(
         onPressed: () {
-          vm.onClick(myIndex);
+          vm.onClick(id);
         },
         icon: Icon(Icons.directions_bike),
       ),
