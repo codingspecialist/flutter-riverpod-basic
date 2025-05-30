@@ -17,7 +17,7 @@ class SelectorHeader extends ConsumerWidget {
             borderRadius: BorderRadius.circular(5),
             child: AspectRatio(
               aspectRatio: 5 / 3,
-              child: Image.asset("${model.currentImage}", fit: BoxFit.cover),
+              child: Image.asset("${model.selectedImage()}", fit: BoxFit.cover),
             ),
           ),
           Padding(

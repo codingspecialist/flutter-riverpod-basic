@@ -18,7 +18,10 @@ class SelectorModel {
   }
 
   // getter
-  String get currentImage => images[selectedIndex];
+  String selectedImage() => images[selectedIndex];
+
+  // getter
+  bool isSelected(int myIndex) => selectedIndex == myIndex;
 }
 
 // 2. 창고 (상태와 행위를 가진다)

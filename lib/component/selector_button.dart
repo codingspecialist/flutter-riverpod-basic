@@ -10,12 +10,13 @@ class SelectorButton extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     HomeVM vm = ref.read(homeProvider.notifier);
+    SelectorModel model = ref.watch(homeProvider);
 
     return Container(
       width: 70,
       height: 70,
       decoration: BoxDecoration(
-        color: Colors.grey,
+        color: model.isSelected(myIndex) ? Colors.orange : Colors.grey,
         borderRadius: BorderRadius.circular(20),
       ),
       child: IconButton(
